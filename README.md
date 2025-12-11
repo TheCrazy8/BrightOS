@@ -1,2 +1,2 @@
 # BrightOS
-Vexcode IQ modular program
+Arduino modular program
