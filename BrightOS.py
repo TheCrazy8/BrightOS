@@ -35,7 +35,7 @@ deadBand = 0
 pausecalc = 0
 
 def Startup():
-    global myVariable, deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
+    global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
     remote_control_code_enabled = False
     brain.play_sound(SoundType.FILLUP)
     brain.screen.set_pen_color(Color.RED)
@@ -49,7 +49,7 @@ def Startup():
     brain.timer.clear()
 
 def main():
-    global myVariable, deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
+    global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
     Startup()
     pausecalc = 0
     deadBand = 5
@@ -79,12 +79,12 @@ def console_format(variable):
     return "{0:.{1}f}".format(variable, precision)
 
 def timer():
-    global myVariable, deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
+    global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
     print(console_format(brain.timer.time(SECONDS)), end="")
     print("\033[2J")
 
 def pause():
-    global myVariable, deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
+    global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
     if brain.buttonCheck.pressing():
         pausecalc = 1
         brain.screen.print("PAUSED")
@@ -99,7 +99,7 @@ def pause():
             wait(20, MSEC)
 
 def drive():
-    global myVariable, deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
+    global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
     if math.fabs(controller.axisD.position()) + math.fabs(controller.axisC.position()) > deadBand:
         LeftMotor.set_velocity((controller.axisD.position() + controller.axisC.position()), PERCENT)
         RightMotor.set_velocity((controller.axisD.position() - controller.axisC.position()), PERCENT)
@@ -109,8 +109,4 @@ def drive():
     LeftMotor.spin(FORWARD)
     RightMotor.spin(FORWARD)
 
-def when_started1():
-    global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
-    main()
-
-when_started1()
+main()
