@@ -2,6 +2,7 @@
 from vex import *
 import urandom
 import math
+import datetime
 
 # Brain should be defined by default
 brain=Brain()
@@ -33,6 +34,7 @@ screen_precision = 0
 console_precision = 0
 deadBand = 0
 pausecalc = 0
+starttime = datetime.now()
 
 def Startup():
     global deadBand, pausecalc, remote_control_code_enabled, screen_precision, console_precision
