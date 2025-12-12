@@ -13,14 +13,17 @@ def safe_listdir(path):
     return []
 
 
-pluginlist = safe_listdir(os.path.expandvars("C:\\Users\\%USER%\\Appdata\\Local\\BrightOS\\Plugins"))
-scriptlist = safe_listdir(os.path.expandvars("C:\\Users\\%USER%\\Appdata\\Local\\BrightOS\\Scripts"))
+plugin_dir = os.path.expandvars("C:\\Users\\%USER%\\Appdata\\Local\\BrightOS\\Plugins")
+script_dir = os.path.expandvars("C:\\Users\\%USER%\\Appdata\\Local\\BrightOS\\Scripts")
+
+pluginlist = safe_listdir(plugin_dir)
+scriptlist = safe_listdir(script_dir)
 # initialize the loader
 loader = Loader()
 
 # load your plugins
-plugins = loader.load_plugins("C:\\Users\%USER%\Appdata\Local\BrightOS\Plugins", pluginlist)
-scripts = loader.load_plugins("C:\\Users\%USER%\Appdata\Local\BrightOS\Scripts", scriptlist)
+plugins = loader.load_plugins(plugin_dir, pluginlist)
+scripts = loader.load_plugins(script_dir, scriptlist)
 print(plugins)
 print(scripts)
 
@@ -49,6 +52,7 @@ def ChooseScript(plugins, scripts):
     scripttorun = scripts.get(key)
     if scripttorun:
       scripttorun.main(plugins)
+      root.destroy()
 
   tk.Button(root, text="Run", command=run_selected).pack(padx=10, pady=(0, 10))
   root.mainloop()
