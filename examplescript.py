@@ -1,7 +1,8 @@
 import time
 
 try:
-  from telemetrix_uno_r4.wifi.telemetrix_uno_r4_wifi.telemetrix_uno_r4_wifi import TelemetrixUnoR4WiFi
+  from telemetrix_uno_r4.wifi.telemetrix_uno_r4_wifi import telemetrix_uno_r4_wifi as telemetrix_wifi
+  TelemetrixUnoR4WiFi = telemetrix_wifi.TelemetrixUnoR4WiFi
 except ImportError:
   TelemetrixUnoR4WiFi = None
 
@@ -33,10 +34,10 @@ def stop():
   if _board:
     try:
       _board.disable_scroll_message()
-    except Exception:
-      pass
+    except Exception as exc:
+      print(f"Could not disable scroll message: {exc}")
     if _created_locally:
       try:
         _board.shutdown()
-      except Exception:
-        pass
+      except Exception as exc:
+        print(f"Could not shut down Telemetrix board: {exc}")
