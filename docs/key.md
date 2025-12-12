@@ -5,120 +5,203 @@ title: Key
 # **KEY:**
 
 **Production status:[^8]**  
-Unproduced Prototype \- Unavailable due to prototypical status. Copyright can be assumed[^9], self-production is unauthorized with or without permission from the module author until it is no longer prototypical. In use for testing purposes only.  
+Unproduced Prototype \- Unavailable due to prototypical status. Copyright can be assumed[^9], self-production is unauthorized with or without permission from the module author until it is no longer prototypical. In use for testing purposes only.
+
 Not in Production \- Unavailable because none are being actively built (on request or otherwise) for any reason. Self-production is unauthorized without explicit permission from the MDPT[^10] (Assuming MDPT has jurisdiction) or affiliated author.  
+
 Discontinued/Outdated (Competition[^11]) \- Permanently unavailable to both the public and the author/MDPT due to it being permanently discontinued by the author/MDPT. Likely outdated to the point of uselessness or banned. If outdated, the module's funding has been cut and self-production is authorized. If banned, no form of production is authorized under any circumstances.  ANY PRODUCT CONTAINING VEX IQ PARTS IS DISCONTINUED   
+
 On Hold \- On hold by owner or MDPT, self-production authorized unless copyrighted  
+
 In Production \- Available because they are being actively manufactured by the MDPT. Rare classification, the low population of club members in Blaze & Co. \+ the low distribution of parts causes this to be a waste of resources. Self-production is unnecessary and therefore unauthorized. Copyright can be assumed.  
+
 Produced upon Request \- Your copy will be manufactured and distributed when you explicitly state that you are interested in one. Self-production unauthorized, copyright can be assumed.  
+
 Public Prototype \- The prototype is available, and copyright can be assumed. Mechanically the same as Produced upon Request.  
+
 Specialized Equipment \- Either made for a very specific purpose or requires specialized integrations, so much so that it is inviable for mass production. Copyright is assumed, and cannot be produced by the public.  
+
 Current Competition Module \- Made for a current competition, not produced for the public. Copyright assumed.  
+
 Easily Built \- Low-effort module, it can be self-made. Not in active production by MDPT or owner. Copyright is inapplicable, it may be made via instructions if small.  
+
 Conceptual \- Not yet made, currently just a concept.  
+
 N/A \- Not applicable, could be an operating system or not our module.
 
 **Production status via color:**  
+
 Red: Not in production, usually cannot be produced by the public without permission, MDPT permissions vary.  
+
 Green: In production, often by MDPT/owner but usually not by the public.  
-Purple: Produced for certain people or a specialized purpose. If you want these produced for you, ask the MDPT or external owner. They have the final say.  
+
+Purple: Produced for certain people or a specialized purpose. If you want these produced for you, ask the MDPT or external owner.
+They have the final say.  
+
 Yellow: Produced by customers, not produced by MDPT.  
+
 Blue: Not yet physically produced.  
+
 Grey: Not produced, might not be physical, or both not easy to build, but allowed to be built.
 
 **Age:**  
+
 Unborn \- Not yet made, just an idea  
+
 Newborn child/Very New \- Made \~1 week ago or earlier  
+
 New \- Made between \~1 to \~2 weeks ago  
+
 Medium/New-ish \- Made \~2 to \~3 weeks ago  
+
 Old/Old-ish/Quite old \- Made \~3 weeks to \~1 month ago  
+
 Very old \- Over \~1 month ago this year  
+
 Extremely old \- Built last year  
+
 Massive: Built multiple years ago  
+
 Dead \- Is discontinued, likely due to age  
+
 Never produced \- Was never made, age is not applicable
 
 **Type:**  
+
 Module \- Easily detached and attached, no electrical connection  
+
 Submodule \- Attached to a module  
+
 Integration \- Not easy to attach/detach, becomes a fundamental part of a bot when equipped  
+
 Motorized Module \- May need a plugin and needs wiring. Not as easy to attach, but not an integration  
+
 Handheld \- Not attachable to the robot, but used in hand for other purposes (I.e. Remote control, pliers, etc.)  
+
 Construct \- A construct is something that is not attached to the robot, but a structure for the robot to utilize/interact with.
 
 **Attachment point:**  
+
 Back/Trailer Hitch \- Attached to the back of the trailer-hitched bot by trailer hook (bottom or top). The original attachment point is very easy to use, the mark 2 and beyond have the capability for a top attachment.  
+
 Front \- Attached to the front, likely near tires. Second attachment point devised and is easy to install, with no hitch required.  
+
 Mid-top \- Attached to the middle/top. Often specialized, and may require some effort  
+
 Tires \- Attached to the tires. Always integrated.  
+
 Any \<module name\> Module \- Attached to any version of the module stated as a submodule.
 
 **Code (in order of least to most efficiency and most to least age going down, in stock means installed on official bot):**  
+
 GlitchOS \- The prototype for DebugOS, is unavailable and archived  
 In stock: 0 (Discontinued)  
+
 DebugOS \- Made on VexCode, is out of date and unavailable/archived. Was bugged and primarily unusable, but led to a better understanding of the platform  
 In stock: 0 (Discontinued)  
+
 ShortCircutOS \- The prototype for BlitzOS. It is a closed beta and only accessible to team Blaze & Co.’s programming team and head engineer, the former being its developer. (87 KB)  
 In stock: 0 (Discontinued)  
+
 BlitzOS \- Made on VexCode, and is fully modular and available for all teams as a complete (but formerly continually updating) operating system. Can support all motorized modules or integrations with the addition of some code. Copyright information: Branches allowed, direct modification allowed, claim to ownership disallowed  
 In stock: 0 (Discontinued[^12])  
+
 [BrightOS](https://github.com/TheCrazy8/BrightOS) \- A new version of the now deprecated BlitzOS, created from scratch, in python, and being much higher quality than its predecessor.  Will interact with an Arduino UNO R4 Wifi instead of Vex IQ brain for increased customizeability and to allow it to do more.  Controls said Arduino via scripts run on the device running the program. (21 KB)  
 In stock: 0 (Open Source12)
 
 **Efficiency:**  
+
 Manual \- Must be used manually by direct physical interference from the operator. Not viable  
+
 Very Low \- The worst efficiency, technically automated but very poorly done/inconsistent  
+
 Low \- Poor efficiency, but usually works consistently  
+
 Medium-low \- Adequate efficiency  
+
 Medium \- Not great, but it works as it should  
+
 Medium-High \- Decent efficiency, aim for at least this with new modules  
+
 High \- Great efficiency, excellently crafted and operator-friendly  
+
 Very High \- Amazing efficiency. Works as it should and does it well 100% of the time  
+
 Perfect \- Works perfectly with no electric loss past what is necessary. Technically impossible to reach, people make mistakes. Sometimes referred to as an ‘Ideal Mechanism’ or ‘Taskmaster’.  
+
 N/A \- Does not apply as a concept and/or does not serve a complex purpose
 
 **Visual appeal:**  
+
 Very Low \- Looks terrible. Sometimes necessary to achieve the highest efficiency  
+
 Low \- Bad-looking at best.  
+
 Low-Medium \- Aim for this or higher, unless you have to sacrifice it for high efficiency  
+
 Medium \- OK visual appeal. It doesn’t detract from or add to the looks of the bot  
+
 Medium-High \- It’s alright, slightly adds to the robot’s overall appeal  
+
 High/Great \- Good. Nice to look at, nothing more  
+
 Very High \- Great\! It is symmetrical, colored, etc.  
+
 The Very \- Incalculably beautiful. Sometimes efficiency needs to be sacrificed for this  
+
 Nil \- Not Applicable, perhaps too small  
+
 N/A No picture(s)
 
 **Expense:**  
+
 External \- Contains a part that is not useable with the current ecosystem.  
+
 None \- Costs nothing.  
+
 Infinitesimal \- Costs next to nothing.  
+
 Very Cheap \- Consists of a small number of cheap parts.  
+
 Cheap \- Consists of any amount of cheap parts.  
+
 Cheap-ish \- Consists of a small amount of more expensive parts or many cheap ones.  
+
 Middle Expense \- Not cheap nor expensive.  
+
 Expensive-ish \- Consists of a small-ish amount of expensive parts or a substantial amount of cheaper ones.  
+
 Expensive \- Consists of any amount of expensive parts.  
+
 Very Expensive \- Consists of a large number of expensive parts.  
+
 Infinite \- Next to unobtainable.  
+
 Unobtainable \- Consists of parts no longer available or nonexistent.
 
 **Titles:**  
+
 MDPT: Child organization of Blaze & Co., distributes and produces modules/integrations to all interested teams. Not responsible for designs. Head of Department: UNKNOWN  
 (N/A)  
+
 Bennett Bashford: Head Engineer and Leader of B\&C, was on the VEX Robotics Executive Council, and was the standing Inventorial Manager. Has extensive coding expertise but prefers engineering. Lead journalist and author of the Blaze & Company Engineering Documentation. Reachable at:[BENNETT BASHFORD](mailto:s977168@student.knoxschools.org) & [bennettbashford@gmail.com](mailto:bennettbashford@gmail.com)   
 (Pending)  
+
 Benjamin Green: Head Programmer of B\&C, formerly on the Vex Robotics Executive Council. Capable of extensive physical engineering, but preferred digital work. Reachable at:[s981822@student.knoxschools.org](mailto:s981822@student.knoxschools.org) & [aetsofficialact@gmail.com](mailto:aetsofficialact@gmail.com)  
 (Pending)
 
 **Past Member Titles:**  
+
 Woody Hezel: **NO LONGER AT BMS | ATTENDING ?????? HIGH SCHOOL** Former Head Engineer and Leader of Team B\&C, MDPT Chief Resident, assistant software engineer, and engineering director. Was present every morning. Reachable at: \[REMOVED\]  
 (Unavailable)  
+
 Spencer (Von) Decker: **NO LONGER AT BMS | ATTENDING WEST HIGH SCHOOL** Former Staff Engineer and Former MDPT Head of Department. Was also known as The Punisher. Reachable at: \[REMOVED\]   
 (Unavailable)  
+
 Ian DiGonzaga: **NO LONGER AT BMS | ATTENDING WEST HIGH SCHOOL** Former gigachad mascot and mentor. Formerly MDPT Distributor Intern, MDPT:D[^13] Director (Appointed by S. Decker) 
 
 **Protocols:**  
+
 New modules and integrations must follow the established format.  
 The image and properly formatted text must be on the same page.  
 Roles given are guidelines, not restrictions. Ex. Engineers are not restricted to engineering, even if expressly not enrolled in any other branch  
