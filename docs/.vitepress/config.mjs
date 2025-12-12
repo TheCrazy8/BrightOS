@@ -8,12 +8,11 @@ const nolebaseMarkdownIt = presetMarkdownIt({
     inlineLinkPreview: false,
 })
 
-export default (async () => {
-    const config = await defineConfig({
+export default (() => {
+    const config = defineConfig({
         title: "B&C Official",
         description: "The Blaze & Company official site.",
         base: "/Blaze-And-Company-Official/",
-        markdown: {},
         themeConfig: {
             siteTitle: "Blaze & Company",
             footer: {
@@ -55,15 +54,14 @@ export default (async () => {
     };
 
     config.vite = config.vite || {};
-    config.vite.plugins = [
-        ...(config.vite.plugins ?? []),
+    config.vite.plugins = config.vite.plugins ?? [];
+    config.vite.optimizeDeps = config.vite.optimizeDeps || {};
+    config.vite.optimizeDeps.exclude = [
+        ...(config.vite.optimizeDeps.exclude ?? []),
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
     ];
     config.vite.ssr = config.vite.ssr || {};
-    config.vite.ssr.noExternal = [
-        ...(config.vite.ssr.noExternal ?? []),
-        '@lando/vitepress-theme-default-plus',
-        '@nolebase/**',
-    ];
+    config.vite.ssr.noExternal = true;
 
     return config;
 })();

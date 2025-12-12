@@ -1,18 +1,19 @@
 import VPLTheme from '@lando/vitepress-theme-default-plus';
-import { NolebaseEnhancedReadabilitiesMenu, NolebaseEnhancedReadabilitiesPlugin, NolebaseEnhancedReadabilitiesScreenMenu } from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
 import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue';
 import { useRoute } from 'vitepress';
-import { h } from 'vue';
+import { defineAsyncComponent, h } from 'vue';
 import vitepressBackToTop from 'vitepress-plugin-back-to-top'
 import 'vitepress-plugin-back-to-top/dist/style.css'
-import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 
 export default {
 ...VPLTheme,
-enhanceApp(ctx) {
-VPLTheme.enhanceApp(ctx);
+async enhanceApp(ctx) {
+  if (import.meta.env.SSR) return;
+  if (typeof VPLTheme.enhanceApp === 'function') await VPLTheme.enhanceApp(ctx);
+  const { NolebaseEnhancedReadabilitiesPlugin } = await import('@nolebase/vitepress-plugin-enhanced-readabilities/client');
+  await import('@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css');
   ctx.app.use(NolebaseEnhancedReadabilitiesPlugin);
 // Register global component (optional)
 ctx.app.component('vImageViewer', vImageViewer);
@@ -23,6 +24,9 @@ ctx.app.component('vImageViewer', vImageViewer);
 },
 enhanceLayout() {
   const baseSlots = typeof VPLTheme.enhanceLayout === 'function' ? VPLTheme.enhanceLayout() : {};
+  if (import.meta.env.SSR) return baseSlots;
+  const NolebaseEnhancedReadabilitiesMenu = defineAsyncComponent(() => import('@nolebase/vitepress-plugin-enhanced-readabilities/client').then(m => m.NolebaseEnhancedReadabilitiesMenu));
+  const NolebaseEnhancedReadabilitiesScreenMenu = defineAsyncComponent(() => import('@nolebase/vitepress-plugin-enhanced-readabilities/client').then(m => m.NolebaseEnhancedReadabilitiesScreenMenu));
   const enhancedSlots = {
     'nav-bar-content-after': [() => h(NolebaseEnhancedReadabilitiesMenu)],
     'nav-screen-content-after': [() => h(NolebaseEnhancedReadabilitiesScreenMenu)],
