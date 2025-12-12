@@ -14,7 +14,10 @@ export default {
 ...VPLTheme,
 async enhanceApp(ctx) {
   if (import.meta.env.SSR) return;
-  if (typeof VPLTheme.enhanceApp === 'function') await VPLTheme.enhanceApp(ctx);
+  if (typeof VPLTheme.enhanceApp === 'function') {
+    const result = VPLTheme.enhanceApp(ctx);
+    if (result instanceof Promise) await result;
+  }
   const { NolebaseEnhancedReadabilitiesPlugin } = await importReadabilities();
   await import('@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css');
   ctx.app.use(NolebaseEnhancedReadabilitiesPlugin);
