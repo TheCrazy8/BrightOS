@@ -1,6 +1,7 @@
 import math
 import os
 import datetime
+import ast
 import tkinter as tk
 from tkinter import ttk
 import threading
@@ -41,6 +42,20 @@ if TelemetrixUnoR4WiFi:
     print(f"Telemetrix setup failed: {exc}")
 plugins["telemetrix"] = telemetrix_board
 
+def get_imports(path):
+    with open(path, 'r') as fh:
+        root = ast.parse(fh.read(), path)
+
+    for node in ast.iter_child_nodes(root):
+        if isinstance(node, ast.Import):
+            module = []
+        elif isinstance(node, ast.ImportFrom):
+            module = node.module
+        else:
+            continue
+
+        for name in node.names:
+            return(f"{name.name}")
 
 def ChooseScript(plugins, scripts):
   output_queue = queue.Queue()
