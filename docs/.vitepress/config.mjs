@@ -61,7 +61,11 @@ export default (() => {
         '@nolebase/vitepress-plugin-enhanced-readabilities',
     ];
     config.vite.ssr = config.vite.ssr || {};
-    config.vite.ssr.noExternal = true;
+    config.vite.ssr.noExternal = [
+        ...(config.vite.ssr.noExternal ?? []),
+        '@lando/vitepress-theme-default-plus',
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+    ];
 
     return config;
 })();
