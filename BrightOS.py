@@ -13,8 +13,8 @@ def safe_listdir(path):
     return []
 
 
-plugin_dir = os.path.expandvars("C:\\Users\\%USER%\\Appdata\\Local\\BrightOS\\Plugins")
-script_dir = os.path.expandvars("C:\\Users\\%USER%\\Appdata\\Local\\BrightOS\\Scripts")
+plugin_dir = os.path.expandvars("C:\\Users\\%USER%\\AppData\\Local\\BrightOS\\Plugins")
+script_dir = os.path.expandvars("C:\\Users\\%USER%\\AppData\\Local\\BrightOS\\Scripts")
 
 pluginlist = safe_listdir(plugin_dir)
 scriptlist = safe_listdir(script_dir)
@@ -47,11 +47,13 @@ def ChooseScript(plugins, scripts):
 
   def run_selected():
     key = display_map.get(selected.get())
-    if key is None:
-      return
-    scripttorun = scripts.get(key)
-    if scripttorun:
-      scripttorun.main(plugins)
+    try:
+      if key is None:
+        return
+      scripttorun = scripts.get(key)
+      if scripttorun and hasattr(scripttorun, "main"):
+        scripttorun.main(plugins)
+    finally:
       root.destroy()
 
   tk.Button(root, text="Run", command=run_selected).pack(padx=10, pady=(0, 10))
