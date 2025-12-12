@@ -2,7 +2,7 @@ import footnote from 'markdown-it-footnote'
 import defineConfig from '@lando/vitepress-theme-default-plus/config'
 
 
-export default defineConfig; {
+export default{
     title: "B&C Official",
     description: "The Blaze & Company official site.",
     base: "/Blaze-And-Company-Official/",
