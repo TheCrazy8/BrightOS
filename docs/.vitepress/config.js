@@ -1,6 +1,4 @@
 import footnote from 'markdown-it-footnote'
-import defineConfig from '@lando/vitepress-theme-default-plus/config'
-
 
 export default{
     title: "B&C Official",
