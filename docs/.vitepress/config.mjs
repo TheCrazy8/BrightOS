@@ -1,14 +1,21 @@
 import footnote from 'markdown-it-footnote'
 import { defineConfig } from '@lando/vitepress-theme-default-plus/config'
+import { presetMarkdownIt } from '@nolebase/integrations/vitepress/markdown-it'
 
-export default defineConfig({
+const nolebaseMarkdownIt = presetMarkdownIt({
+    bidirectionalLinks: false,
+    unlazyImages: false,
+    inlineLinkPreview: false,
+});
+
+const config = defineConfig({
     title: "B&C Official",
     description: "The Blaze & Company official site.",
     base: "/Blaze-And-Company-Official/",
     markdown: {
         config: (md) => {
-            md.use(footnote)
-        }
+            md.use(footnote);
+        },
     },
     themeConfig: {
         siteTitle: "Blaze & Company",
@@ -41,3 +48,25 @@ export default defineConfig({
         }
     }
 });
+
+const themeMarkdownConfig = config.markdown?.config;
+config.markdown = config.markdown || {};
+config.markdown.config = (md) => {
+    nolebaseMarkdownIt.install(md);
+    if (typeof themeMarkdownConfig === 'function') themeMarkdownConfig(md);
+};
+
+config.vite = config.vite || {};
+config.vite.plugins = config.vite.plugins ?? [];
+config.vite.optimizeDeps = config.vite.optimizeDeps || {};
+config.vite.optimizeDeps.exclude = [
+    ...(config.vite.optimizeDeps.exclude ?? []),
+    '@nolebase/vitepress-plugin-enhanced-readabilities',
+];
+config.vite.ssr = config.vite.ssr || {};
+const noExternal = new Set(config.vite.ssr.noExternal ?? []);
+noExternal.add('@lando/vitepress-theme-default-plus');
+noExternal.add('@nolebase/vitepress-plugin-enhanced-readabilities');
+config.vite.ssr.noExternal = Array.from(noExternal);
+
+export default config;
