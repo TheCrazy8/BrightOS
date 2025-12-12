@@ -12,6 +12,11 @@ const config = defineConfig({
     title: "B&C Official",
     description: "The Blaze & Company official site.",
     base: "/Blaze-And-Company-Official/",
+    markdown: {
+        config: (md) => {
+            md.use(footnote);
+        },
+    },
     themeConfig: {
         siteTitle: "Blaze & Company",
         footer: {

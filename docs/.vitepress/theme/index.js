@@ -11,7 +11,7 @@ let readabilitiesPromise;
 const importReadabilities = () => readabilitiesPromise ??= import('@nolebase/vitepress-plugin-enhanced-readabilities/client');
 
 export default {
-...VPLTheme,
+  ...VPLTheme,
 async enhanceApp(ctx) {
   if (import.meta.env.SSR) return;
   if (typeof VPLTheme.enhanceApp === 'function') {
