@@ -60,10 +60,11 @@ config.vite.optimizeDeps.exclude = [
     '@nolebase/vitepress-plugin-enhanced-readabilities',
 ];
 config.vite.ssr = config.vite.ssr || {};
-config.vite.ssr.noExternal = [
+const noExternal = [
     ...(config.vite.ssr.noExternal ?? []),
     '@lando/vitepress-theme-default-plus',
     '@nolebase/vitepress-plugin-enhanced-readabilities',
 ];
+config.vite.ssr.noExternal = Array.from(new Set(noExternal));
 
 export default config;
