@@ -1,0 +1,23 @@
+{
+  "name": "Pharloom United Web Map",
+  "version": "1.0.0",
+  "description": "The map of the Pharloom United rp world",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "author": "theCrazy8",
+  "license": "CC-BY-NC-SA-4.0",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
+  },
+  "dependencies": {
+    "@lando/vitepress-theme-default-plus": "^1.1.1",
+    "viewerjs": "^1.11.7",
+    "vitepress-plugin-image-viewer": "^1.1.6",
+    "vitepress-plugin-back-to-top": "^1.0.1"
+  }
+}
