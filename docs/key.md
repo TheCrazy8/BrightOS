@@ -4,7 +4,7 @@ title: Key
 
 # **KEY:**
 
-**Production status[^8]:**  
+**Production status:[^8]**  
 Unproduced Prototype \- Unavailable due to prototypical status. Copyright can be assumed[^9], self-production is unauthorized with or without permission from the module author until it is no longer prototypical. In use for testing purposes only.  
 Not in Production \- Unavailable because none are being actively built (on request or otherwise) for any reason. Self-production is unauthorized without explicit permission from the MDPT[^10] (Assuming MDPT has jurisdiction) or affiliated author.  
 Discontinued/Outdated (Competition[^11]) \- Permanently unavailable to both the public and the author/MDPT due to it being permanently discontinued by the author/MDPT. Likely outdated to the point of uselessness or banned. If outdated, the module's funding has been cut and self-production is authorized. If banned, no form of production is authorized under any circumstances.  ANY PRODUCT CONTAINING VEX IQ PARTS IS DISCONTINUED   
