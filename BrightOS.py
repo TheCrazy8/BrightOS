@@ -95,7 +95,7 @@ def ChooseScript(plugins, scripts):
       class QueueWriter(io.StringIO):
         def write(self, s):
           super().write(s)
-          if s.strip():
+          if s and s != "\n":
             output_queue.put(s.rstrip("\n"))
 
       buf = QueueWriter()
@@ -122,7 +122,7 @@ def ChooseScript(plugins, scripts):
         except Exception as exc:
           append_output(f"Stop failed: {exc}")
       else:
-        append_output("Stop not supported for this script.")
+        append_output("Stop not supported for this script; ensure your script implements stop().")
     else:
       append_output("No running script to stop.")
 
