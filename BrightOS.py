@@ -16,3 +16,11 @@ plugins = loader.load_plugins("C:\\Users\%USER%\Appdata\Local\BrightOS\Plugins",
 scripts = loader.load_plugins("C:\\Users\%USER%\Appdata\Local\BrightOS\Scripts", scriptlist)
 print(plugins)
 print(scripts)
+
+
+def ChooseScript(plugins, scripts):
+  for i in scripts:
+    print(f"{scripts[i]}, {i}")
+  choice = input("Type the numerical value of the script you would like to use (will be replaced with a dropdown menu and run button when GUI is built)")
+  scripttorun = scripts[choice]
+  scripttorun.main(plugins)
