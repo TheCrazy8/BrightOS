@@ -1,7 +1,7 @@
 {
-  "name": "Pharloom United Web Map",
+  "name": "Blaze & Company Official",
   "version": "1.0.0",
-  "description": "The map of the Pharloom United rp world",
+  "description": "Official Blaze & Company site",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs",
