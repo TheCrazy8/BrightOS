@@ -54,7 +54,6 @@ config.markdown = config.markdown || {};
 config.markdown.config = (md) => {
     nolebaseMarkdownIt.install(md);
     if (typeof themeMarkdownConfig === 'function') themeMarkdownConfig(md);
-    md.use(footnote);
 };
 
 config.vite = config.vite || {};
@@ -65,11 +64,9 @@ config.vite.optimizeDeps.exclude = [
     '@nolebase/vitepress-plugin-enhanced-readabilities',
 ];
 config.vite.ssr = config.vite.ssr || {};
-const noExternal = [
-    ...(config.vite.ssr.noExternal ?? []),
-    '@lando/vitepress-theme-default-plus',
-    '@nolebase/vitepress-plugin-enhanced-readabilities',
-];
-config.vite.ssr.noExternal = Array.from(new Set(noExternal));
+const noExternal = new Set(config.vite.ssr.noExternal ?? []);
+noExternal.add('@lando/vitepress-theme-default-plus');
+noExternal.add('@nolebase/vitepress-plugin-enhanced-readabilities');
+config.vite.ssr.noExternal = Array.from(noExternal);
 
 export default config;

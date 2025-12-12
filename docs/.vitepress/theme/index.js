@@ -18,8 +18,8 @@ async enhanceApp(ctx) {
     const result = VPLTheme.enhanceApp(ctx);
     if (result instanceof Promise) await result;
   }
-  const { NolebaseEnhancedReadabilitiesPlugin } = await importReadabilities();
   await import('@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css');
+  const { NolebaseEnhancedReadabilitiesPlugin } = await importReadabilities();
   ctx.app.use(NolebaseEnhancedReadabilitiesPlugin);
   // Register global component (optional)
   ctx.app.component('vImageViewer', vImageViewer);
