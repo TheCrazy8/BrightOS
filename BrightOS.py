@@ -2,6 +2,7 @@ import math
 import os
 import datetime
 import tkinter as tk
+from tkinter import ttk
 import threading
 import queue
 import telemetrix_uno_r4_wifi
@@ -37,7 +38,7 @@ def ChooseScript(plugins, scripts):
   root = tk.Tk()
   root.title("BrightOS")
 
-  tk.Label(root, text="Select a script to run").pack(padx=10, pady=(10, 5))
+  ttk.Label(root, text="Select a script to run").pack(padx=10, pady=(10, 5))
 
   has_scripts = bool(scripts)
 
@@ -50,9 +51,9 @@ def ChooseScript(plugins, scripts):
     display_map = {}
     selected = tk.StringVar(value="No scripts")
     options = ["No scripts"]
-    tk.Label(root, text="No scripts found").pack(padx=10, pady=(0, 10))
+    ttk.Label(root, text="No scripts found").pack(padx=10, pady=(0, 10))
 
-  tk.OptionMenu(root, selected, *options).pack(padx=10, pady=(0, 10))
+  ttk.Combobox(root, textvariable=selected, values=options, state="readonly").pack(padx=10, pady=(0, 10))
 
   output = tk.Text(root, height=12, width=60, state=tk.DISABLED)
   output.pack(padx=10, pady=(0, 10))
@@ -124,8 +125,8 @@ def ChooseScript(plugins, scripts):
     else:
       append_output("No running script to stop.")
 
-  tk.Button(root, text="Run", command=run_selected, state=tk.NORMAL if has_scripts else tk.DISABLED).pack(padx=10, pady=(0, 5))
-  tk.Button(root, text="Stop", command=stop_running).pack(padx=10, pady=(0, 10))
+  ttk.Button(root, text="Run", command=run_selected, state=tk.NORMAL if has_scripts else tk.DISABLED).pack(padx=10, pady=(0, 5))
+  ttk.Button(root, text="Stop", command=stop_running).pack(padx=10, pady=(0, 10))
 
   append_output(f"Plugins loaded: {len(plugins)}, Scripts loaded: {len(scripts)}")
 
