@@ -5,7 +5,10 @@ import tkinter as tk
 from tkinter import ttk
 import threading
 import queue
-import telemetrix_uno_r4_wifi
+try:
+  from telemetrix_uno_r4.wifi.telemetrix_uno_r4_wifi.telemetrix_uno_r4_wifi import TelemetrixUnoR4WiFi
+except ImportError:
+  TelemetrixUnoR4WiFi = None
 from simple_plugin_loader import Loader
 from contextlib import redirect_stdout, redirect_stderr
 import io
@@ -29,6 +32,13 @@ loader = Loader()
 # load your plugins
 plugins = loader.load_plugins(plugin_dir, pluginlist)
 scripts = loader.load_plugins(script_dir, scriptlist)
+telemetrix_board = None
+if TelemetrixUnoR4WiFi:
+  try:
+    telemetrix_board = TelemetrixUnoR4WiFi()
+  except Exception as exc:
+    print(f"Telemetrix setup failed: {exc}")
+plugins["telemetrix"] = telemetrix_board
 
 
 def ChooseScript(plugins, scripts):
