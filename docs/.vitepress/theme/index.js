@@ -21,12 +21,12 @@ async enhanceApp(ctx) {
   const { NolebaseEnhancedReadabilitiesPlugin } = await importReadabilities();
   await import('@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css');
   ctx.app.use(NolebaseEnhancedReadabilitiesPlugin);
-// Register global component (optional)
-ctx.app.component('vImageViewer', vImageViewer);
+  // Register global component (optional)
+  ctx.app.component('vImageViewer', vImageViewer);
   vitepressBackToTop({
-      // default
-      threshold:300
-    })
+    // default
+    threshold:300
+  });
 },
 enhanceLayout() {
   const baseSlots = typeof VPLTheme.enhanceLayout === 'function' ? VPLTheme.enhanceLayout() : {};
@@ -44,8 +44,8 @@ enhanceLayout() {
   return merged;
 },
 setup() {
-const route = useRoute();
-// Enable the plugin
-imageViewer(route);
+  const route = useRoute();
+  // Enable the plugin
+  imageViewer(route);
 }
 };

@@ -65,6 +65,6 @@ const noExternal = [
     '@lando/vitepress-theme-default-plus',
     '@nolebase/vitepress-plugin-enhanced-readabilities',
 ];
-config.vite.ssr.noExternal = noExternal;
+config.vite.ssr.noExternal = Array.from(new Set(noExternal));
 
 export default config;
