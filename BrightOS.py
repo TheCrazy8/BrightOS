@@ -28,8 +28,6 @@ loader = Loader()
 # load your plugins
 plugins = loader.load_plugins(plugin_dir, pluginlist)
 scripts = loader.load_plugins(script_dir, scriptlist)
-print(plugins)
-print(scripts)
 
 
 def ChooseScript(plugins, scripts):
@@ -128,6 +126,8 @@ def ChooseScript(plugins, scripts):
 
   tk.Button(root, text="Run", command=run_selected, state=tk.NORMAL if has_scripts else tk.DISABLED).pack(padx=10, pady=(0, 5))
   tk.Button(root, text="Stop", command=stop_running).pack(padx=10, pady=(0, 10))
+
+  append_output(f"Plugins loaded: {len(plugins)}, Scripts loaded: {len(scripts)}")
 
   poll_output()
   root.mainloop()
