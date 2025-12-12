@@ -1,7 +1,7 @@
 export default {
     title: "B&C Official",
     description: "The Blaze & Company official site.",
-    base: "/BlazeAndCo/",
+    base: "/Blaze-And-Company-Official/",
     themeConfig: {
         siteTitle: "Blaze & Company",
         footer: {
