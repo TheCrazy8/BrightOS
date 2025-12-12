@@ -9,7 +9,7 @@ import telemetrix_uno_r4_wifi
 from simple_plugin_loader import Loader
 from contextlib import redirect_stdout, redirect_stderr
 import io
-
+import sv_ttk
 
 def safe_listdir(path):
   try:
@@ -130,6 +130,7 @@ def ChooseScript(plugins, scripts):
 
   append_output(f"Plugins loaded: {len(plugins)}, Scripts loaded: {len(scripts)}")
 
+  sv_ttk.use_dark_theme()
   poll_output()
   root.mainloop()
 
