@@ -1,5 +1,4 @@
 import VPLTheme from '@lando/vitepress-theme-default-plus';
-import './custom.css'
 import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue';
