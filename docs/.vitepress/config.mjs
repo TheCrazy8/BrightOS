@@ -7,7 +7,7 @@ export default defineConfig({
     base: "/Blaze-And-Company-Official/",
     markdown: {
         config: (md) => {
-      md.use(footnote)
+            md.use(footnote)
         }
     },
     themeConfig: {
