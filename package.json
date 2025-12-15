@@ -21,6 +21,6 @@
     "vitepress-plugin-image-viewer": "^1.1.6",
     "vitepress-plugin-back-to-top": "^1.0.1",
     "markdown-it-footnote": "^4.0.0",
-    "markdown-it-spoiler": "^0.13.1"
+    "markdown-it-spoiler": "^1.1.6"
   }
 }
