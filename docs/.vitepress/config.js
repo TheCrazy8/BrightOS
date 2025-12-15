@@ -1,5 +1,5 @@
 import footnote from 'markdown-it-footnote'
-import defineConfig from '@lando/vitepress-theme-default-plus/config'
+import { defineConfig } from '@lando/vitepress-theme-default-plus/config'
 
 export default defineConfig({
     markdown: {
