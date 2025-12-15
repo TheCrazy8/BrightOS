@@ -1,4 +1,12 @@
-export default {
+import footnote from 'markdown-it-footnote'
+import defineConfig from '@lando/vitepress-theme-default-plus/config'
+
+export default defineConfig({
+    markdown: {
+        config: (md) => {
+          md.use(footnote)
+        }
+      },
     title: "B&C Official",
     description: "The Blaze & Company official site.",
     base: "/Blaze-And-Company-Official/",
@@ -32,4 +40,4 @@ export default {
             noExternal: ['@lando/vitepress-theme-default-plus']
         }
     }
-};
+});
