@@ -1,9 +1,7 @@
 import footnote from 'markdown-it-footnote'
 import { defineConfig } from 'vitepress'
-import Theme from '@lando/vitepress-theme-default-plus'
 
 export default defineConfig({
-  extends: Theme, // keep the theme
   markdown: {
     config(md) {
       md.use(footnote)
@@ -29,8 +27,12 @@ export default defineConfig({
     },
     search: { provider: 'local' }
   },
-  head: [['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
+  ],
   vite: {
-    ssr: { noExternal: ['@lando/vitepress-theme-default-plus'] }
+    ssr: {
+      noExternal: ['@lando/vitepress-theme-default-plus']
+    }
   }
 })
