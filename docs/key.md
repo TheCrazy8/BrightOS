@@ -104,10 +104,11 @@ ShortCircutOS \- The prototype for BlitzOS. It is a closed beta and only accessi
 In stock: 0 (Discontinued)  
 
 BlitzOS \- Made on VexCode, and is fully modular and available for all teams as a complete (but formerly continually updating) operating system. Can support all motorized modules or integrations with the addition of some code. Copyright information: Branches allowed, direct modification allowed, claim to ownership disallowed  
-In stock: 0 (Discontinued[^12])  
+In stock: 0 (Discontinued)  
 
 [BrightOS](https://github.com/TheCrazy8/BrightOS) \- A new version of the now deprecated BlitzOS, created from scratch, in python, and being much higher quality than its predecessor.  Will interact with an Arduino UNO R4 Wifi instead of Vex IQ brain for increased customizeability and to allow it to do more.  Controls said Arduino via scripts run on the device running the program. (21 KB)  
-In stock: 0 (Open Source12)
+
+In stock: 0 (Open Source)
 
 **Efficiency:**  
 
@@ -289,8 +290,6 @@ The MDPT can produce modules for other teams. People generally don’t use this.
 [^10]:  Modular Distribution and Production Team
 
 [^11]:  Optional, will be used if the module was used in a competition(s).
-
-[^12]:  Open source is available to public
 
 [^13]:  MDPT driving sub-branch.
 
