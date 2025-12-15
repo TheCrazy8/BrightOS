@@ -19,7 +19,7 @@ title: Key
 
 <mark style="background-color: green">Public Prototype</mark> \- The prototype is available, and copyright can be assumed. Mechanically the same as Produced upon Request.  
 
-<mark style="background-color: purple">Specialized Equipment</mark> \- Either made for a very specific purpose or requires specialized integrations, so much so that it is inviable for mass production. Copyright is assumed, and cannot be produced by the public.  
+<mark style="background-color: purple">Specialized Equipment</mark> \- Either made for a very specific purpose or requires specialized integrations, so much so that it is inviable for mass production. Copyright is assumed, and cannot be produced by the public.
 
 <mark style="background-color: purple">Current Competition Module</mark> \- Made for a current competition, not produced for the public. Copyright assumed.  
 
@@ -38,7 +38,7 @@ title: Key
 <mark style="background-color: purple">Purple</mark>: Produced for certain people or a specialized purpose. If you want these produced for you, ask the MDPT or external owner.
 They have the final say.  
 
-<mark style="background-color: yellow">Yellow</mark>: Produced by customers, not produced by MDPT.</mark>  
+<mark style="background-color: yellow">Yellow</mark>: Produced by customers, not produced by MDPT.
 
 <mark style="background-color: blue">Blue</mark>: Not yet physically produced.  
 
@@ -98,7 +98,7 @@ GlitchOS \- The prototype for DebugOS, is unavailable and archived
 In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
 
 DebugOS \- Made on VexCode, is out of date and unavailable/archived. Was bugged and primarily unusable, but led to a better understanding of the platform  
-In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
+In stock: 0 (<mark style="background-color: red">Discontinued</mark>)
 
 ShortCircutOS \- The prototype for BlitzOS. It is a closed beta and only accessible to team Blaze & Co.’s programming team and head engineer, the former being its developer. (87 KB)  
 In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
