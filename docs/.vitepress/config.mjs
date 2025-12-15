@@ -56,13 +56,6 @@ config.markdown.config = (md) => {
     if (typeof themeMarkdownConfig === 'function') themeMarkdownConfig(md);
 };
 
-config.vite = config.vite || {};
-config.vite.plugins = config.vite.plugins ?? [];
-config.vite.optimizeDeps = config.vite.optimizeDeps || {};
-config.vite.optimizeDeps.exclude = [
-    ...(config.vite.optimizeDeps.exclude ?? []),
-    '@nolebase/vitepress-plugin-enhanced-readabilities',
-];
 config.vite.ssr = config.vite.ssr || {};
 const noExternal = new Set(config.vite.ssr.noExternal ?? []);
 noExternal.add('@lando/vitepress-theme-default-plus');
