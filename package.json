@@ -18,6 +18,7 @@
     "@lando/vitepress-theme-default-plus": "^1.1.1",
     "viewerjs": "^1.11.7",
     "vitepress-plugin-image-viewer": "^1.1.6",
-    "vitepress-plugin-back-to-top": "^1.0.1"
+    "vitepress-plugin-back-to-top": "^1.0.1",
+    "markdown-it-footnote": "^4.0.0"
   }
 }
