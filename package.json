@@ -16,6 +16,7 @@
     "vue": "^3.5.18"
   },
   "dependencies": {
+    "@nolebase/vitepress-plugin-enhanced-readabilities":"^1.0.0",
     "@lando/vitepress-theme-default-plus": "^1.1.1",
     "@nolebase/integrations": "^2.18.2",
     "viewerjs": "^1.11.7",
