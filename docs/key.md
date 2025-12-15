@@ -5,44 +5,44 @@ title: Key
 # **KEY:**
 
 **Production status:[^8]**  
-Unproduced Prototype \- Unavailable due to prototypical status. Copyright can be assumed[^9], self-production is unauthorized with or without permission from the module author until it is no longer prototypical. In use for testing purposes only.
+<mark style="background-color: red">Unproduced Prototype</mark> \- Unavailable due to prototypical status. Copyright can be assumed[^9], self-production is unauthorized with or without permission from the module author until it is no longer prototypical. In use for testing purposes only.
 
-Not in Production \- Unavailable because none are being actively built (on request or otherwise) for any reason. Self-production is unauthorized without explicit permission from the MDPT[^10] (Assuming MDPT has jurisdiction) or affiliated author.  
+<mark style="background-color: red">Not in Production</mark> \- Unavailable because none are being actively built (on request or otherwise) for any reason. Self-production is unauthorized without explicit permission from the MDPT[^10] (Assuming MDPT has jurisdiction) or affiliated author.  
 
-Discontinued/Outdated (Competition[^11]) \- Permanently unavailable to both the public and the author/MDPT due to it being permanently discontinued by the author/MDPT. Likely outdated to the point of uselessness or banned. If outdated, the module's funding has been cut and self-production is authorized. If banned, no form of production is authorized under any circumstances.  ANY PRODUCT CONTAINING VEX IQ PARTS IS DISCONTINUED   
+<mark style="background-color: red">Discontinued/Outdated (Competition[^11])</mark> \- Permanently unavailable to both the public and the author/MDPT due to it being permanently discontinued by the author/MDPT. Likely outdated to the point of uselessness or banned. If outdated, the module's funding has been cut and self-production is authorized. If banned, no form of production is authorized under any circumstances.  ANY PRODUCT CONTAINING VEX IQ PARTS IS DISCONTINUED   
 
-On Hold \- On hold by owner or MDPT, self-production authorized unless copyrighted  
+<mark style="background-color: red">On Hold</mark> \- On hold by owner or MDPT, self-production authorized unless copyrighted  
 
-In Production \- Available because they are being actively manufactured by the MDPT. Rare classification, the low population of club members in Blaze & Co. \+ the low distribution of parts causes this to be a waste of resources. Self-production is unnecessary and therefore unauthorized. Copyright can be assumed.  
+<mark style="background-color: green">In Production</mark> \- Available because they are being actively manufactured by the MDPT. Rare classification, the low population of club members in Blaze & Co. \+ the low distribution of parts causes this to be a waste of resources. Self-production is unnecessary and therefore unauthorized. Copyright can be assumed.  
 
-Produced upon Request \- Your copy will be manufactured and distributed when you explicitly state that you are interested in one. Self-production unauthorized, copyright can be assumed.  
+<mark style="background-color: green">Produced upon Request</mark> \- Your copy will be manufactured and distributed when you explicitly state that you are interested in one. Self-production unauthorized, copyright can be assumed.  
 
-Public Prototype \- The prototype is available, and copyright can be assumed. Mechanically the same as Produced upon Request.  
+<mark style="background-color: green">Public Prototype</mark> \- The prototype is available, and copyright can be assumed. Mechanically the same as Produced upon Request.  
 
-Specialized Equipment \- Either made for a very specific purpose or requires specialized integrations, so much so that it is inviable for mass production. Copyright is assumed, and cannot be produced by the public.  
+<mark style="background-color: purple">Specialized Equipment</mark> \- Either made for a very specific purpose or requires specialized integrations, so much so that it is inviable for mass production. Copyright is assumed, and cannot be produced by the public.  
 
-Current Competition Module \- Made for a current competition, not produced for the public. Copyright assumed.  
+<mark style="background-color: purple">Current Competition Module</mark> \- Made for a current competition, not produced for the public. Copyright assumed.  
 
-Easily Built \- Low-effort module, it can be self-made. Not in active production by MDPT or owner. Copyright is inapplicable, it may be made via instructions if small.  
+<mark style="background-color: yellow">Easily Built</mark> \- Low-effort module, it can be self-made. Not in active production by MDPT or owner. Copyright is inapplicable, it may be made via instructions if small.  
 
-Conceptual \- Not yet made, currently just a concept.  
+<mark style="background-color: blue">Conceptual</mark> \- Not yet made, currently just a concept.  
 
-N/A \- Not applicable, could be an operating system or not our module.
+<mark style="background-color: grey">N/A</mark> \- Not applicable, could be an operating system or not our module.
 
 **Production status via color:**  
 
-Red: Not in production, usually cannot be produced by the public without permission, MDPT permissions vary.  
+<mark style="background-color: red">Red</mark>: Not in production, usually cannot be produced by the public without permission, MDPT permissions vary.  
 
-Green: In production, often by MDPT/owner but usually not by the public.  
+<mark style="background-color: green">Green</mark>: In production, often by MDPT/owner but usually not by the public.  
 
-Purple: Produced for certain people or a specialized purpose. If you want these produced for you, ask the MDPT or external owner.
+<mark style="background-color: purple">Purple</mark>: Produced for certain people or a specialized purpose. If you want these produced for you, ask the MDPT or external owner.
 They have the final say.  
 
-Yellow: Produced by customers, not produced by MDPT.  
+<mark style="background-color: yellow">Yellow</mark>: Produced by customers, not produced by MDPT.</mark>  
 
-Blue: Not yet physically produced.  
+<mark style="background-color: blue">Blue</mark>: Not yet physically produced.  
 
-Grey: Not produced, might not be physical, or both not easy to build, but allowed to be built.
+<mark style="background-color: grey">Grey</mark>: Not produced, might not be physical, or both not easy to build, but allowed to be built.
 
 **Age:**  
 
@@ -95,20 +95,20 @@ Any \<module name\> Module \- Attached to any version of the module stated as a 
 **Code (in order of least to most efficiency and most to least age going down, in stock means installed on official bot):**  
 
 GlitchOS \- The prototype for DebugOS, is unavailable and archived  
-In stock: 0 (Discontinued)  
+In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
 
 DebugOS \- Made on VexCode, is out of date and unavailable/archived. Was bugged and primarily unusable, but led to a better understanding of the platform  
-In stock: 0 (Discontinued)  
+In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
 
 ShortCircutOS \- The prototype for BlitzOS. It is a closed beta and only accessible to team Blaze & Co.’s programming team and head engineer, the former being its developer. (87 KB)  
-In stock: 0 (Discontinued)  
+In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
 
 BlitzOS \- Made on VexCode, and is fully modular and available for all teams as a complete (but formerly continually updating) operating system. Can support all motorized modules or integrations with the addition of some code. Copyright information: Branches allowed, direct modification allowed, claim to ownership disallowed  
-In stock: 0 (Discontinued)  
+In stock: 0 (<mark style="background-color: red">Discontinued</mark>)  
 
 [BrightOS](https://github.com/TheCrazy8/BrightOS) \- A new version of the now deprecated BlitzOS, created from scratch, in python, and being much higher quality than its predecessor.  Will interact with an Arduino UNO R4 Wifi instead of Vex IQ brain for increased customizeability and to allow it to do more.  Controls said Arduino via scripts run on the device running the program. (21 KB)  
 
-In stock: 0 (Open Source)
+In stock: 0 (<mark style="background-color: blue">Open Source</mark>)
 
 **Efficiency:**  
 
@@ -297,11 +297,11 @@ The MDPT can produce modules for other teams. People generally don’t use this.
 
 [^15]:  First three are not punishable on first time, but viewing HoD documentation without approval \> demotion by 1 rank and third offence this month of first three \> demotion by 1 rank. Repeated offences may subject perpetrator to expulsion from B\&C.
 
-[^16]:  Green production statuses: In ProductionProduced Upon RequestPublic Prototype
+[^16]:  <mark style="background-color: green">Green</mark> production statuses: <mark style="background-color: green">In Production</mark>, <mark style="background-color: green">Produced Upon Request</mark>, <mark style="background-color: green">Public Prototype</mark>
 
 [^17]:  File a google doc explaining why you want/need it, which one it is, and why we should distribute it. Application will most likely be denied if another team is filing for our current competition build.
 
-[^18]:  Purple production statuses: Specialized EquipmentCurrent competition Equipment
+[^18]:  <mark style="background-color: purple">Purple</mark> production statuses: <mark style="background-color: purple">Specialized Equipment</mark>, <mark style="background-color: purple">Current competition Equipment</mark>
 
 [image1]: <data:image/png;base64,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>
 
