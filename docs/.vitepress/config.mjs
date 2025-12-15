@@ -1,43 +1,36 @@
 import footnote from 'markdown-it-footnote'
-import { defineConfig } from '@lando/vitepress-theme-default-plus/config'
+import { defineConfig } from 'vitepress'
+import Theme from '@lando/vitepress-theme-default-plus'
 
 export default defineConfig({
-    markdown: {
-        config: (md) => {
-          md.use(footnote)
-        }
-      },
-    title: "B&C Official",
-    description: "The Blaze & Company official site.",
-    base: "/Blaze-And-Company-Official/",
-    themeConfig: {
-        siteTitle: "Blaze & Company",
-        footer: {
-            message: "Released under the CC BY-NC-ND 4.0 License.",
-            copyright: "Copyright © 2025-present TheCrazy8",
-        },
-        nav: [
-        ],
-        sidebar: [
-        ],
-        
-        lastUpdated: {
-              text: 'Updated at',
-              formatOptions: {
-                    dateStyle: 'full',
-                    timeStyle: 'medium'
-              }
-        },
-        search: {
-              provider: 'local'
-        },
-    },
-    head: [
-        ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
-    ],
-    vite: {
-        ssr: {
-            noExternal: ['@lando/vitepress-theme-default-plus']
-        }
+  extends: Theme, // keep the theme
+  markdown: {
+    config(md) {
+      md.use(footnote)
     }
-});
+  },
+  title: "B&C Official",
+  description: "The Blaze & Company official site.",
+  base: "/Blaze-And-Company-Official/",
+  themeConfig: {
+    siteTitle: "Blaze & Company",
+    footer: {
+      message: "Released under the CC BY-NC-ND 4.0 License.",
+      copyright: "Copyright © 2025-present TheCrazy8",
+    },
+    nav: [],
+    sidebar: [],
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+    search: { provider: 'local' }
+  },
+  head: [['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]],
+  vite: {
+    ssr: { noExternal: ['@lando/vitepress-theme-default-plus'] }
+  }
+})
