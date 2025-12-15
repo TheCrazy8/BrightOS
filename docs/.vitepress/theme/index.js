@@ -6,9 +6,12 @@ import { useRoute } from 'vitepress';
 import { defineAsyncComponent, h } from 'vue';
 import vitepressBackToTop from 'vitepress-plugin-back-to-top'
 import 'vitepress-plugin-back-to-top/dist/style.css'
+import { 
+  NolebaseEnhancedReadabilitiesMenu, 
+  NolebaseEnhancedReadabilitiesScreenMenu, 
+} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
-let readabilitiesPromise;
-const importReadabilities = () => readabilitiesPromise ??= import('@nolebase/vitepress-plugin-enhanced-readabilities/client');
+import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 
 export default {
   ...VPLTheme,
