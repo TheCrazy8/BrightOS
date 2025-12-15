@@ -11,6 +11,7 @@
   "author": "theCrazy8",
   "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
+    "sass": "^1.83.1",
     "vitepress": "^1.6.4",
     "vue": "^3.5.18"
   },
