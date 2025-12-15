@@ -1,3 +1,4 @@
+import spoiler from 'markdown-it-spoiler'
 import footnote from 'markdown-it-footnote'
 import { defineConfig } from 'vitepress'
 
@@ -5,6 +6,7 @@ export default defineConfig({
   markdown: {
     config(md) {
       md.use(footnote)
+      md.use(spoiler)
     }
   },
   title: "B&C Official",
