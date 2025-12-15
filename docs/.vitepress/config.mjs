@@ -1,11 +1,12 @@
 import footnote from 'markdown-it-footnote'
 import { defineConfig } from '@lando/vitepress-theme-default-plus/config'
 import { presetMarkdownIt } from '@nolebase/integrations/vitepress/markdown-it'
+import { enhancedReadabilities } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 
 const nolebaseMarkdownIt = presetMarkdownIt({
-    bidirectionalLinks: false,
-    unlazyImages: false,
-    inlineLinkPreview: false,
+    bidirectionalLinks: true,
+    unlazyImages: true,
+    inlineLinkPreview: true,
 });
 
 const config = defineConfig({
@@ -42,11 +43,22 @@ const config = defineConfig({
     head: [
         ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
     ],
-    vite: {
-        ssr: {
-            noExternal: ['@lando/vitepress-theme-default-plus']
-        }
-    }
+    vite: { 
+        optimizeDeps: { 
+          exclude: [ 
+            '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
+            'vitepress', 
+            '@nolebase/ui', 
+          ], 
+        }, 
+        ssr: { 
+          noExternal: [ 
+            // If there are other packages that need to be processed by Vite, you can add them here.
+            '@nolebase/vitepress-plugin-enhanced-readabilities', 
+            '@nolebase/ui', 
+          ], 
+        }, 
+      }, 
 });
 
 const themeMarkdownConfig = config.markdown?.config;
@@ -55,11 +67,5 @@ config.markdown.config = (md) => {
     nolebaseMarkdownIt.install(md);
     if (typeof themeMarkdownConfig === 'function') themeMarkdownConfig(md);
 };
-
-config.vite.ssr = config.vite.ssr || {};
-const noExternal = new Set(config.vite.ssr.noExternal ?? []);
-noExternal.add('@lando/vitepress-theme-default-plus');
-noExternal.add('@nolebase/vitepress-plugin-enhanced-readabilities');
-config.vite.ssr.noExternal = Array.from(noExternal);
 
 export default config;
