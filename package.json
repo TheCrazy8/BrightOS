@@ -20,7 +20,7 @@
     "viewerjs": "^1.11.7",
     "vitepress-plugin-image-viewer": "^1.1.6",
     "vitepress-plugin-back-to-top": "^1.0.1",
-    "markdown-it-footnote": "^4.0.0"
+    "markdown-it-footnote": "^4.0.0",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.18.2"
   }
 }
