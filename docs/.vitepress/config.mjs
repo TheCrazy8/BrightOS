@@ -38,8 +38,18 @@ export default defineConfig({
     ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
   ],
   vite: {
+    optimizeDeps: { 
+      exclude: [ 
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
+        'vitepress', 
+        '@nolebase/ui', 
+        },
     ssr: {
-      noExternal: ['@lando/vitepress-theme-default-plus']
+      noExternal: [
+        '@lando/vitepress-theme-default-plus',
+        '@nolebase/vitepress-plugin-enhanced-readabilities', 
+        '@nolebase/ui',
+      ]
     }
   }
 })
