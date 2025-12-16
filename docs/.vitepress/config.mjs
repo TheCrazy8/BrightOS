@@ -25,7 +25,8 @@ export default defineConfig({
       text: 'Updated',
       formatOptions: {
         dateStyle: 'full',
-        timeStyle: 'medium'
+        timeStyle: 'medium',
+        forceLocale: true,
       }
     },
     search: { provider: 'local' },
