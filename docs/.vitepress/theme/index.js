@@ -7,6 +7,7 @@ import vitepressBackToTop from 'vitepress-plugin-back-to-top';
 import 'vitepress-plugin-back-to-top/dist/style.css';
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import { NolebaseEnhancedReadabilitiesPlugin } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
+import './styles/main.css'
 
 export default {
   ...VPLTheme,
