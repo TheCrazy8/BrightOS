@@ -28,7 +28,10 @@ export default defineConfig({
         timeStyle: 'medium'
       }
     },
-    search: { provider: 'local' }
+    search: { provider: 'local' },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/TheCrazy8/Blaze-And-Company-Official' }
+    ],
   },
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
