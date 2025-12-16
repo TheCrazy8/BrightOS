@@ -12,6 +12,7 @@ import {
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
+import { NolebaseEnhancedReadabilitiesPlugin } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 
 export default {
   ...VPLTheme,
@@ -27,6 +28,7 @@ export default {
   enhanceApp(ctx) {
     // Call base theme enhanceApp if it exists
     VPLTheme.enhanceApp?.(ctx);
+    ctx.use(NolebaseEnhancedReadabilitiesPlugin) 
 
     // Register global component (optional)
     ctx.app.component('vImageViewer', vImageViewer);
