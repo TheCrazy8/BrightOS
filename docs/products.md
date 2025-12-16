@@ -16,4 +16,4 @@ Expense: TBD
 Efficiency: TBD  
 Production Status: 0 (<mark style="background-color: blue">Conceptual</mark>)  
 Subjective Summary:  The new base of basically anything, really.  
-[placeholder](placeholder.png)
+![placeholder](placeholder.png)
