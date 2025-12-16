@@ -16,7 +16,10 @@ export default defineConfig({
       message: "Released under the CC BY-NC-ND 4.0 License.",
       copyright: "Copyright © 2025-present TheCrazy8",
     },
-    nav: [],
+    nav: [
+      { text: 'Key', link: '/key' },
+      { text: 'Products', link: '/products'},
+    ],
     sidebar: [],
     lastUpdated: {
       text: 'Updated',
