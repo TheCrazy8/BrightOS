@@ -8,7 +8,7 @@ title: Products
 
 ## Integrations:
 
-**BASE Integration:**  
+### BASE Integration:  
 The base of any bot  
 Age: Unborn  
 Visual Appeal: TBD  
