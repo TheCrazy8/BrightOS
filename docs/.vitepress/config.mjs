@@ -19,7 +19,7 @@ export default defineConfig({
     nav: [],
     sidebar: [],
     lastUpdated: {
-      text: 'Updated at',
+      text: 'Updated',
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'medium'
