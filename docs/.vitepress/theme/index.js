@@ -1,3 +1,4 @@
+import { h } from 'vue';
 import VPLTheme from '@lando/vitepress-theme-default-plus';
 import 'viewerjs/dist/viewer.min.css';
 import imageViewer from 'vitepress-plugin-image-viewer';
@@ -6,28 +7,30 @@ import { useRoute } from 'vitepress';
 import vitepressBackToTop from 'vitepress-plugin-back-to-top';
 import 'vitepress-plugin-back-to-top/dist/style.css';
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
-import { NolebaseEnhancedReadabilitiesPlugin } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
-import './styles/main.css'
+import {
+  NolebaseEnhancedReadabilitiesPlugin,
+  NolebaseEnhancedReadabilitiesLayout,
+} from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
+import './styles/main.css';
 
 export default {
   ...VPLTheme,
+
+  // Wrap the layout so the enhanced-readabilities menu mounts
+  Layout: () =>
+    h(NolebaseEnhancedReadabilitiesLayout, null, {
+      'layout-bottom': () => h(VPLTheme.Layout),
+    }),
+
   enhanceApp(ctx) {
-    // Call base theme enhanceApp if it exists
     ctx.app.use(NolebaseEnhancedReadabilitiesPlugin);
     VPLTheme.enhanceApp?.(ctx);
-
-    // Register global component (optional)
     ctx.app.component('vImageViewer', vImageViewer);
-
-    // Enable back-to-top
-    vitepressBackToTop({
-      threshold: 300,
-    });
+    vitepressBackToTop({ threshold: 300 });
   },
 
   setup() {
     const route = useRoute();
-    // Enable the image viewer plugin
     imageViewer(route);
   },
 };
