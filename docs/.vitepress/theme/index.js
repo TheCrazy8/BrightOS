@@ -9,16 +9,16 @@ import 'vitepress-plugin-back-to-top/dist/style.css';
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css';
 import {
   NolebaseEnhancedReadabilitiesPlugin,
-  NolebaseEnhancedReadabilitiesLayout,
+  NolebaseEnhancedReadabilitiesRootLayout,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client';
 import './styles/main.css';
 
 export default {
   ...VPLTheme,
 
-  // Wrap the layout so the enhanced-readabilities menu mounts
+  // Wrap the layout so the enhanced-readabilities menu mounts (v2 API)
   Layout: () =>
-    h(NolebaseEnhancedReadabilitiesLayout, null, {
+    h(NolebaseEnhancedReadabilitiesRootLayout, null, {
       'layout-bottom': () => h(VPLTheme.Layout),
     }),
 
