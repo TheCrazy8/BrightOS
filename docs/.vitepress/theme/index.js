@@ -13,8 +13,8 @@ export default {
   ...VPLTheme,
   enhanceApp(ctx) {
     // Call base theme enhanceApp if it exists
+    ctx.app.use(NolebaseEnhancedReadabilitiesPlugin);
     VPLTheme.enhanceApp?.(ctx);
-    ctx.app.use(NolebaseEnhancedReadabilitiesPlugin) 
 
     // Register global component (optional)
     ctx.app.component('vImageViewer', vImageViewer);
