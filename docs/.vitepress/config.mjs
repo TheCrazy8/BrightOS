@@ -42,8 +42,9 @@ export default defineConfig({
       exclude: [ 
         '@nolebase/vitepress-plugin-enhanced-readabilities/client', 
         'vitepress', 
-        '@nolebase/ui', 
-        },
+        '@nolebase/ui',
+        ]
+      },
     ssr: {
       noExternal: [
         '@lando/vitepress-theme-default-plus',
