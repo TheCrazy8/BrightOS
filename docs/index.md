@@ -25,6 +25,7 @@ features:
 
 ## Quick Links
 - [Key](/key)
+- [Products](/products)
 
 ## Getting Started
 1. Use the navigation on the left to browse docs.
