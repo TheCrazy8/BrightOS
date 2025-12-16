@@ -9,6 +9,9 @@ hero:
     - theme: brand
       text: View the Key
       link: /key
+    - theme: brand
+      text: View Product List
+      link: /products
     - theme: alt
       text: GitHub Repo
       link: https://github.com/TheCrazy8/Blaze-And-Company-Official
